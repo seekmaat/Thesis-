@@ -1,0 +1,146 @@
+
+\documentclass[12pt]{amsart}
+\usepackage[left=1.5in,top=1.25in,right=1.25in, bottom=1.25in, nofoot]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx} 
+\usepackage[super]{natbib}
+\onehalfspace % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+\include{KCWmacros}
+% See the ``Article customise'' template for come common customisations
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center} 
+\Large
+An Attempt at Direct Observation of Anharmonic 
+
+Vibrational Coupling Constants with Two-Dimensional
+
+Femtosecond Stimulated Raman Spectroscopy
+
+\small
+
+by
+
+Kristina C. Wilson
+
+\vspace{0.5in}
+
+Submitted in Partial Fulfillment
+
+of the
+
+Requirements for the Degree
+
+Doctor of Philosophy
+
+\vspace{0.5in}
+
+Supervised by
+
+Professor David McCamant
+
+Department of Chemistry
+
+Arts, Sciences and Engineering
+
+School of Arts and Sciences
+
+\vspace{0.5in}
+
+University of Rochester
+
+Rochester, New York
+
+2012
+\end{center} 
+
+\newpage
+%\title{Development of Two Dimensional Femtosecond Stimulated Raman Spectroscopy in an effort to directly measure Anharmonic Vibrational Coupling Constants}
+%\author{Kristina C. Wilson}
+%\date{March 2012} % delete this line to display the current date
+%%% BEGIN DOCUMENT
+
+
+%\maketitle
+\newpage
+\tableofcontents
+
+\newpage %list of tables
+\listoftables
+
+\newpage %list of figures
+\listoffigures
+
+\newpage
+\section{Introduction}
+
+\subsection{Motivation}
+
+The practice of physical science is driven by a feedback loop between the desire to elucidate fundamental physical principles and the development of experimental methodologies that endeavor necessitates. The object of this thesis was to develop a method that could directly measure anharmonic vibrational coupling constants--the molecular characteristic that governs a substance's ability to transfer heat, or Vibrational Energy Resdistribution (VER). This method is Two-Dimensional Femtosecond Stimulated Raman Spectroscopy.\cite{DanaD2001149}
+
+\subsection{The Harmonic Oscillator Approximation and Raman Spectroscopy}
+
+The Harmonic Oscillator Approximation (H.O.) is one of the most fundamental models in physics. In a fortunate coincidence, molecular bonds are modeled well as microscopic balls on springs. In fact, the ability to structurally characterize organic molecules with vibrational spectroscopies relies on the robustness of this model. For example, it is why the peak from C-H single bond can always be found at about 3000 cm$^{-1}$. However, failures of the H.O. Approximation provide details of molecular structure and the interactions of molecules with their environment. When the simple H.O. model breaks down, vibrations of chemical bonds on the same molecule can interact with one another. This can also occur between neighboring molecules when facilitated by an interaction like hydrogen bonding. These energy-transfers are manifested physically as heat transfer, among other things. The phenomena are observed spectrally in broadening or slight shifting of peaks around a characteristic value. Thus, both adherence to and deviation from the H.O. render Raman spectroscopy informative.
+
+Raman spectroscopy has long been employed to probe these sensitive vibrational energy levels. Previously, elucidating the mechanisms that facilitate interactions between these vibrations has  been undertaken with Two Dimensional Infrared spectroscopy and sometimes with five or seven beam monochromatic Raman spectroscopy. The object of this thesis was to develop a relatively simple, polychromatic, three beam, Raman spectroscopy. We intended for this method to probe the interactions between vibrations without resorting to the use of IR beams that are invisible to the human eye and limited spectrally or the unwieldy assembly of monochromatic beams that have been necessary for past high order Raman spectroscopies.    
+
+\subsection{Why study VER?}
+
+One of the most familiar and important failures of the Harmonic Oscillator Approximation is heat dissipation via anharmonic vibrational coupling; this is phenomenon is referred to as Vibrational Energy Relaxation (VER), Vibrational Cooling (VC) or Intramolecular Vibrational Energy Redistribution (IVR). Heat is dissipated on the molecular level when energy in one vibration transfers to another vibration on the same molecule, another molecule, or into the environment around the energetic molecule. [Fayer and Tok 1996, Dlott] ***Relevant in which examples*** [Dlott 1998] Despite the significance of VER and ostensible simplicity of a system that can, in many circumstances, be modeled as a simple H.O., scientists cannot seem to predict which bonds energy will flow between. ***Dlott 2001
+
+\subsection{Known characteristics of VER.}
+
+This lack of predictive power is not due to a lack of study, though. For decades, numerous scientists have observed VER in a time-resolved fashion. A common experiment begins with excitation of a high energy vibration. At times after the excitation, the energy flow into excitations of lower energy vibrations is monitored with time-resolved IR or Raman spectroscopy. Energy flow is largely governed by Fermi’s Golden Rule, which is to say, the likelihood of energy flow from one to another is based on three factors: 
+
+%make graphic for this. Words are ok but ref. Tokmakoff and Fayer 1996 for math.
+(1) the energy difference between the modes, 
+(2) the density of states of the accepting modes and 
+(3) the matrix element coupling the wavefunctions belonging to those modes. 
+
+The observation of the entire VER event can, in theory, provide information about all of these factors. Energy differences are easily obtained through traditional steady state vibrational spectroscopy, the densities of states are also available though steady state spectroscopy, sometimes with supplements from theoretical calculations and the final factor, the coupling matrix element, should be able to be deduced from these studies when the other two factors are accounted for. 
+
+Unfortunately, this has not been the case. With the exception of already well-known symmetry constraints on vibrational combination bands [Carter], patterns dictating the magnitudes of these matrix elements remain elusive. [Dlott 2001] As mentioned above, vibrational anharmonicity—more specifically, the values of the constants that couple two vibrational modes via vibrational anharmonicity—is the main source of these couplings. Thus, a natural response to the stubbornness of these unknowns is to attempt to probe these anharmonic coupling constants directly.
+
+\subsection{The need for 2D-FSRS}
+
+Before the last two decades, VER was probed through the indirect methods mentioned above. During the 1990's, Two-Dimensional Infrared (2DIR) [CITE] spectroscopy and high-order Raman [CITE] spectroscopies were developed in hopes of finally measuring anharmonic vibrational coupling constants directly. These methods present numerous experimental limitations, though. 2DIR is limited by a relatively narrow spectral bandwidth. Common 2DIR bandwidths of 200--300\cm restrict the method to coupled modes that are 200--300\cm apart. While 2DIR has facilitated significant progress for important systems that do fit this criterion, for example torsions about amide bonds [cite Zanni or Hochstrasser], it cannot probe the couplings between vibrations separated by more than 300\cm which abound in other important chemical systems. This method also present pragmatic challenges: all IR spectroscopies are difficult to apply given the invisibility of IR beams. 
+
+Five and seven beam Raman experiments were pursued by numerous groups in the 1990's and early 2000's, but they ultimately proved impractical.[CITE] Most higher order Raman experiments attempted to observe the fifth order non-linearity that would measure the anharmonic coupling between CS$_{2}$ dimers. The high polarizability of this molecular pairing makes it particularly well suited for Raman spectroscopy. However, because it is lesser studied, results are difficult to extrapolate to other molecular systems. In these studies, pulses were minimally compressed 800nm titanium:sapphire output, but still, such high numbers of beams are unwieldy and the large number of fields incident on the sample lead to a plethora of high order signals*[cite early "it didn't work" papers]. Some of these signals were much more intense than the desired signals, but had nearly identical spectral and temporal characteristics. In fact, the string of papers documenting the initial false success, realized failure, and then hard earned true success to observe the correct signal comprises one of the more dramatic narratives in chemical physics.[ cite Dave Blank, Tokmakoff]. 
+
+%%%*footnote: Five beam 2D Raman experiments generate the desired fifth order signal as well as third order signals. These third order signals, which contain no information about vibrational anhrmonicity, occur at the same Raman shift as the fifth order signals and oscillate at the period of the coherently stimulated low frequency mode. However, they are many times more intense than the desired fifth order signals. This 
+
+The desire to directly measure anharmonic vibrational coupling constants with a practical methodology drove the McCamant lab to pursue our own attempts at this old problem. Our reasoning for this will become apparent after a short overview of the FSRS method.
+
+\subsection{Overview of Femtosecond Stimulated Raman Spectroscopy (FSRS)}
+
+Insight into the fundamental nature of molecular vibrations requires observation of events which occur within one vibrational period of a molecular bond---that is, on the order of 10-100 fs; according to the Nyquist relation, this means such events must be sampled at least twice during that time interval. [For a history of the development of normal, one-dimensional FSRS, see Dave’s thesis. ]
+
+Before the development of FSRS, Raman spectroscopy could only probe events that occurred on a time scale of a few picoseconds or longer. This is because the transform limit ($\Delta$t$\Delta\nu\geq$14 ps \cm) necessitates that the Raman pump must be longer than the natural dephasing time of a vibration in order to probe it without sacrificing spectral resolution of the peak. Until FSRS introduced the possibility of a third pulse, the time resolution of Transient Raman was limited to the duration of these vibrations, which is to say, a few picoseconds. FSRS changed this by introducing a third pulse that initiates a photochemical or photophysical event with a 20-100 fs pulse. Resultant changes in molecular structure are probed with Stimulated Raman Spectroscopy (SRS). SRS can be employed with a temporally long, spectrally narrow Raman pump and a broadband, femtosecond probe to vibrations without sacrificing spectral or temporal resolution. (see review of FSRS for a more in-depth explanation of how this trick works) The broadband probe also allows ~4000 /cm of Raman shift, or the entire Raman spectral window, to be probed at each time point.
+
+\subsection{Introduction toTwo-Dimensional Femtosecond Stimulated Raman Spectroscopy}
+	
+ In 2006, Kukura et al \cite{KukuraPRLcdcl3} attempted FSRS on CDCl$_{3}$ with a non-resonant initial pulse. This pulse was known to induce a coherent superposition of the low frequency C-Cl bending normal mode, via the Impulsive Stimulated Raman Effect [ISRS cite]. Stimulated Raman spectra taken at intervals of about 20 fs after the initial pulse showed oscillating sidebands on each side of the C-Cl stretch (wave numbers???), with periods equal to those of the low frequency modes (\cclb),  at Raman shifts that were equal to the sum and difference of the high frequency modes and the low frequency modes (i.e., \chst + \cclb and \chst - \cclb). Oscillating sidebands like these indicate frequency modulation of the higher frequency modes, so Kukura et al., with theoretical support from Soo.-Y. Lee [cite] deduced that they had directly observed anharmonic vibrational coupling. Given this promising result, the McCamant group hoped to further characterize and develop this method. We determined that taking a Fourier Transform along the time axis would yield a Raman analogue of the 2D-IR plots mentioned above, in which cross peaks between two coupled modes would be proportional to their vibrational anharmonic coupling, and named this new method 2D-FSRS.
+ 
+ 2D-FSRS, in addition to supplying fundamental physical information, would overcome some of the difficulties of 2D-IR. Raman uses visible instead of IR pulses, which are more facile to see and work with. It is also easier to generate the broadband super-continuua suitable for compressing into temporally short pulses in the visible than in the IR regime. The ability to generate broadband pulses also meant that, at a given time point, 2D-Raman would be capable of interrogating vibrational couplings in the entire molecule, thus opening the door to characterizations of a much greater variety of chemical systems than 2D-IR had been able to access.
+ 
+ 2D-FSRS also constituted an improvement over the previous five and seven beam Raman spectroscopies because it only requires three beams and each additional beam adds a layer of technical difficulty. However, our 2D Raman spectroscopy fell victim to the same problems that those higher order Raman spectroscopies did---third order signals that had many of the earmarks of vibrational anharmonic coupling swamped the fifth order signals that might carry the desired information. This thesis describes the characterization of 2D FSRS and thus, its ultimate demise.
+ 
+ 
+  
+
+
+It can measure mol.  anharm.
+ Short History of 2D Raman.
+Of course, we were not the first to think of making a Raman analogue to 2DIR.
+  What is it we are measuring again?
+ 
+\bibliography{ch1thesisrefs} 
+\bibliographystyle{amsplain}
+
+
+ 
+ \end{document}
+ 
